@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>OBRIGADO!</title>
+    <style>
+    :root {
+        --color-blue: #1B3A9E;
+        --color-blue-dark: #13297A;
+        --color-green: #2E8B6E;
+        --color-green-light: #F0FFF4;
+        --color-green-border: #C6F6D5;
+        --color-text-heading: #1A1A2E;
+        --color-text-primary: #2D3436;
+        --color-text-secondary: #4A5568;
+        --color-text-muted: #718096;
+        --color-border: #E8ECEF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--color-text-primary);
+        background: #F3F5F8;
+        -webkit-font-smoothing: antialiased;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 16px;
+    }
+
+    .thanks-wrapper {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .thanks-card {
+        background: #FFFFFF;
+        border-radius: 16px;
+        padding: 56px 48px;
+        box-shadow: 0 2px 24px rgba(26,26,46,0.05);
+        border: 1px solid var(--color-border);
+        text-align: center;
+    }
+
+    .thanks-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--color-green-light);
+        border: 2px solid var(--color-green-border);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 28px;
+        font-size: 36px;
+    }
+
+    .thanks-title {
+        font-size: 30px;
+        font-weight: 800;
+        color: var(--color-green);
+        margin-bottom: 8px;
+        letter-spacing: 0.02em;
+    }
+
+    .thanks-divider {
+        border: none;
+        height: 1px;
+        background: var(--color-border);
+        margin: 28px auto;
+        width: 60%;
+    }
+
+    .thanks-text {
+        font-size: 17px;
+        color: var(--color-text-primary);
+        margin-bottom: 16px;
+        line-height: 1.65;
+    }
+
+    .thanks-warning {
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--color-text-heading);
+        margin-bottom: 16px;
+    }
+
+    .thanks-phone {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 24px;
+        background: var(--color-green-light);
+        border: 1px solid var(--color-green-border);
+        border-radius: 10px;
+        margin: 20px 0 8px;
+        font-size: 15px;
+        color: var(--color-green);
+        font-weight: 600;
+    }
+
+    .thanks-detail {
+        font-size: 15px;
+        color: var(--color-text-secondary);
+        line-height: 1.65;
+        margin-top: 20px;
+    }
+
+    .thanks-footer {
+        margin-top: 28px;
+        font-size: 13px;
+        color: var(--color-text-muted);
+    }
+
+    @media (max-width: 600px) {
+        body { padding: 24px 12px; }
+        .thanks-card { padding: 36px 24px; border-radius: 12px; }
+        .thanks-title { font-size: 26px; }
+        .thanks-text, .thanks-warning { font-size: 16px; }
+        .thanks-detail { font-size: 14px; }
+        .thanks-icon { width: 64px; height: 64px; font-size: 28px; }
+    }
+    </style>
+</head>
+<body>
+
+    <div class="thanks-wrapper">
+        <div class="thanks-card">
+            <div class="thanks-icon">✓</div>
+            <h1 class="thanks-title">OBRIGADO!</h1>
+            <hr class="thanks-divider">
+            <p class="thanks-text">O pedido foi aceito e está sendo processado.</p>
+            <p class="thanks-warning">Por favor, não desligue o seu celular!</p>
+            <div class="thanks-phone">
+                📞 Aguarde a nossa chamada
+            </div>
+            <hr class="thanks-divider">
+            <p class="thanks-detail">Gostaríamos de entrar em contato com você por telefone para finalizar sua compra. Isso é muito importante, pois dessa forma poderemos fornecer todas as informações necessárias e responder a quaisquer perguntas que você possa ter.</p>
+            <p class="thanks-footer">Detoxil water — entrega em todo o Portugal</p>
+        </div>
+    </div>
+
+<!-- Facebook Pixel Code -->
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+<script>
+var fbpx = getUrlParam("fbpx") || '{fbpx}';
+
+if ( window.location !== window.parent.location ) {
+    console.log('in iframe');
+    var pdata = {type:"facebook",fbpx: fbpx};
+    parent.postMessage(JSON.stringify(pdata),"*");
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var eventer = window[eventMethod];
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+    var noparent = true;
+    eventer(messageEvent,function(e) {
+      console.log('pingback:  ',e.data);
+      noparent = false;
+    },false);
+    setTimeout(function(){
+        if(noparent){
+            console.log('no pingpack');
+            $("body").append('<img height="1" width="1" src="https://www.facebook.com/tr?id=' + fbpx + '&ev=Lead&noscript=1"/>');
+        }
+    }, 2000);
+} else {
+    console.log('in top');
+    $("body").append('<img height="1" width="1" src="https://www.facebook.com/tr?id=' + fbpx + '&ev=Lead&noscript=1"/>');
+}
+
+function getUrlParam( name, url ) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+</script>
+
+</body>
+</html>
