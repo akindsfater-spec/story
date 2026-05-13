@@ -107,17 +107,57 @@
         font-weight: 600;
     }
 
-    .thanks-detail {
+    .next-steps {
+        background: #F3F5F8;
+        border-radius: 12px;
+        padding: 24px;
+        margin: 24px 0;
+        text-align: left;
+    }
+    .next-steps-title {
         font-size: 15px;
-        color: var(--color-text-secondary);
-        line-height: 1.65;
-        margin-top: 20px;
+        font-weight: 700;
+        color: var(--color-text-heading);
+        margin-bottom: 14px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+    .step {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 10px 0;
+        font-size: 15px;
+        color: var(--color-text-primary);
+        line-height: 1.5;
+    }
+    .step-num {
+        flex: 0 0 28px;
+        height: 28px;
+        background: var(--color-blue);
+        color: #FFFFFF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
     }
 
-    .thanks-footer {
-        margin-top: 28px;
-        font-size: 13px;
-        color: var(--color-text-muted);
+    .payment-reminder {
+        margin-top: 24px;
+        padding: 16px 20px;
+        background: var(--color-green-light);
+        border: 1px solid var(--color-green-border);
+        border-radius: 10px;
+        font-size: 14px;
+        color: var(--color-text-primary);
+        line-height: 1.55;
+    }
+    .payment-reminder b {
+        color: var(--color-green);
+        font-size: 15px;
     }
 
     @media (max-width: 600px) {
@@ -125,7 +165,8 @@
         .thanks-card { padding: 36px 24px; border-radius: 12px; }
         .thanks-title { font-size: 26px; }
         .thanks-text, .thanks-warning { font-size: 16px; }
-        .thanks-detail { font-size: 14px; }
+        .next-steps { padding: 18px; }
+        .step { font-size: 14px; }
         .thanks-icon { width: 64px; height: 64px; font-size: 28px; }
     }
     </style>
@@ -140,11 +181,18 @@
             <p class="thanks-text">O pedido foi aceito e está sendo processado.</p>
             <p class="thanks-warning">Por favor, não desligue o seu celular!</p>
             <div class="thanks-phone">
-                📞 Aguarde a nossa chamada
+                📞 O nosso especialista irá ligar-lhe em breve
             </div>
-            <hr class="thanks-divider">
-            <p class="thanks-detail">Gostaríamos de entrar em contato com você por telefone para finalizar sua compra. Isso é muito importante, pois dessa forma poderemos fornecer todas as informações necessárias e responder a quaisquer perguntas que você possa ter.</p>
-            <p class="thanks-footer">Detoxil water — entrega em todo o Portugal</p>
+            <div class="next-steps">
+                <p class="next-steps-title">O que acontece agora:</p>
+                <div class="step"><span class="step-num">1</span><span>O nosso especialista irá <b>ligar-lhe em breve</b></span></div>
+                <div class="step"><span class="step-num">2</span><span>Confirmamos os detalhes da entrega e o seu endereço</span></div>
+                <div class="step"><span class="step-num">3</span><span>O estafeta entregará a encomenda — <b>pagamento na entrega</b></span></div>
+            </div>
+            <div class="payment-reminder">
+                <b>Pagamento apenas na entrega</b><br>
+                Nenhum valor foi cobrado. Paga em dinheiro ao estafeta quando receber a encomenda.
+            </div>
         </div>
     </div>
 
